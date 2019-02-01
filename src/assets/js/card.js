@@ -27,7 +27,7 @@ return this.value;
 
 }
 
-  render(){
+render(){
     this.assignNum();
     this.element = document.createElement('div');
     this.element.className = `card face-${this.rank}-of-${this.suit}`
@@ -37,7 +37,7 @@ return this.value;
 
   mount(parent){
     parent.appendChild(this.render());
-  }
+  } 
 
 
 } 

@@ -85,10 +85,9 @@ class Deck {
 
   hit(player){
     let popedCard =  this.cards.pop();
-    console.log(popedCard);
     popedCard.mount(this.render(player));
      return popedCard;
-  }
+  } 
 
   
 }
