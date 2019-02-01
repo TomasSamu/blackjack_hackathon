@@ -78,9 +78,16 @@ class Deck {
     }
   }
 
+  render(player) {
+    let container = document.querySelector(`#${player}Card`);
+    return container;
+  }
 
-  hit(){
-     return this.cards.pop();
+  hit(player){
+    let popedCard =  this.cards.pop();
+    console.log(popedCard);
+    popedCard.mount(this.render(player));
+     return popedCard;
   }
 
   

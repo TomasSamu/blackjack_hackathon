@@ -3,24 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const deck = new Deck();
   deck.shuffle();
 
-  const handDealer = new Hand();
-  const handPlayer = new Hand();
+ /*  const handDealer = new Hand();
+  const handPlayer = new Hand(); */
 
-  handDealer.hit()
-  handPlayer.hit()
-
-let dealerContainer = document.querySelector('#dealerCard');
-
- const card = deck.hit()
-  card.mount(dealerContainer);
-
-let playerContainer = document.querySelector('#playerCard');
+  // handPlayer = card.assignNum();
+ /*  const handDealer = new Hand([]);
+  const handPlayer = new Hand([]); */
+ deck.hit('dealer');
+/*  console.log(deck.hit('dealer')); */
 
   let hitButton = document.querySelector('.js-hit')
   hitButton.addEventListener('click', () => {
 
-    const card = deck.hit()
-    card.mount(playerContainer);
+    const card = deck.hit('player');
+    handPlayer.addCards(card.value)
+    
 
   })
 

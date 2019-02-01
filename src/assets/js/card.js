@@ -23,7 +23,7 @@ assignNum(){
       break;
     }
 
-console.log(this.value);
+return this.value;
 
 }
 
