@@ -52,7 +52,7 @@ class Deck {
       new Card('king', 'spades'),
       new Card('ace', 'diamonds'),
       new Card('2', 'diamonds'),
-      new Card('3', 'diamonds'),
+      new Card('3', 'diamonds'),   
       new Card('4', 'diamonds'),
       new Card('5', 'diamonds'),
       new Card('6', 'diamonds'),
@@ -77,4 +77,11 @@ class Deck {
       this.cards[j] = swap;
     }
   }
+
+
+  hit(){
+     return this.cards.pop();
+  }
+
+  
 }
