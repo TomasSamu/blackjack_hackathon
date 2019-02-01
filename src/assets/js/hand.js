@@ -7,16 +7,16 @@
 console.log(this.score); */
 
 addCards(value){
-
+const handScore = document.querySelector('#handscore')
 this.score += value;
-document.querySelector('#handscore').textContent = this.score /* {
-    if this.score > 21 {
-        .textContent = "BUSTED";
+
+    if (this.score > 21) {
+        handScore.textContent = 'BUSTED'
     }else {
-        return this.score
+        handScore.textContent = this.score
     }
-} */ ;
-console.log(value);
-}
+
+return this.score
+};
 
 }

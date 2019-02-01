@@ -13,7 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const card = deck.hit('player');
   /*   console.log(card) */
-    handPlayer.addCards(card.value)
+    const score = handPlayer.addCards(card.value)
+
+    if (score >= 21) {
+      hitButton.setAttribute('disabled','disabled');
+    }
+
     
   })
 
